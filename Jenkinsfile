@@ -56,6 +56,11 @@ pipeline {
                 sh 'echo "${message}"'
             }
         }
+        stage('Deploy') {
+            steps {
+                sh 'echo "Deploying the code"'
+            }
+        }
     }
      post{
             always{
