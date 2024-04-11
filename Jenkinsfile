@@ -48,6 +48,14 @@ pipeline {
                 sh 'echo "${City}"'
             }
         }
+        stage('Git SCM') {
+            environment{
+                message = 'Successfully connected to GIT SCM'
+            }
+            steps {
+                sh 'echo "${message}"'
+            }
+        }
     }
      post{
             always{
